@@ -11,6 +11,17 @@ const Game = () => {
     const [gameStart, setGameStart] = useState(false)
     const [gameOver, setGameOver] = useState(false)
     const [finalScore, setFinalScore] = useState([])
+    const [start, setStart] = useState()
+    const [now, setNow] = useState(start)
+    const counter = now - start
+
+    useEffect(() => {
+        if (gameStart) {
+            const intervalID = setInterval(() => setNow(Date.now()), 1)
+            return () => clearInterval(intervalID)
+        }
+    }, [gameStart])
+
 
     const incrementTurn = () => {
         if (turn !== players - 1) {
@@ -30,6 +41,8 @@ const Game = () => {
         setTime(0)
         setGameStart(false)
         setGameOver(false)
+        setNow(undefined)
+        setStart(undefined)
     }
     const newGame = () => {
         reset()
@@ -44,6 +57,7 @@ const Game = () => {
     const handleCellClick = (e, i) => {
         if (players === 1 && activeCell === undefined && activeIndex === undefined) {
             setGameStart(true)
+            setStart(Date.now())
         }
         if (!activeCell && !activeIndex && (activeCell !== 0 && activeIndex !== 0)) {
             setActiveCell(e)
@@ -73,6 +87,7 @@ const Game = () => {
                 if (JSON.stringify(arr) === JSON.stringify(board)) {
                     setGameOver(true)
                     setGameStart(false)
+                    setTime(counter)
                     if (players > 1) {
                         let scores = m.map((m, i) => {
                             return {player: i + 1, score: m}
@@ -108,7 +123,7 @@ const Game = () => {
             {moves.map((m, i) => (
                 <span key={i}>{m}</span>
             ))}
-            <span>{time}</span>
+            <span>{counter ? counter : '0'}</span>
         </div>
         {gameOver ? 
         <div className='gameover'>

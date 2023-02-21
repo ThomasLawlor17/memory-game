@@ -8,8 +8,6 @@ export const AppContext = createContext({
     theme: '',
     setTheme: () => {},
     themeList: [],
-    icons: [],
-    setIcons: () => {},
     players: '',
     setPlayers: () => {},
     size: '',
@@ -28,7 +26,6 @@ export const AppContext = createContext({
 const AppProvider = ({children}) => {
     const [active, setActive] = useState(false)
     const [theme, setTheme] = useState()
-    const [icons, setIcons] = useState([])
     const [players, setPlayers] = useState()
     const [size, setSize] = useState()
     const [board, setBoard] = useState([])
@@ -65,8 +62,6 @@ const AppProvider = ({children}) => {
                 theme,
                 setTheme,
                 themeList,
-                icons,
-                setIcons,
                 players,
                 setPlayers,
                 size,

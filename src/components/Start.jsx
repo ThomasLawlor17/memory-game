@@ -76,12 +76,61 @@ ul li {
     border-radius: 36px;
 }
 
+@media (max-width: 769px) {
+    padding: 56px;
+    width: 70.6%;
+    gap: 32px;
+
+    span {
+        font-size: 20px;
+        line-height: 24.8px;
+    }
+    li, .buttons span, button {
+        font-size: 26px;
+        line-height: 32.24px;
+    }
+    div ul:not(.open), .buttons {
+        margin-top: 16px;
+    }
+
+    .buttons ul {
+        width: 256px;
+        background-color: var(--light-slate);
+        border-radius: 20px;
+        gap: 10px;
+        padding: 15px 0 15px 0;
+        top: 57px;
+    }
+
+    ul li, .buttons span, .buttons button {
+        border-radius: 26px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .players li {
+        width: 119px;
+    }
+    .size li, .buttons span, .buttons button {
+        width: 256px;
+    }
+
+    .start {
+        height: 70px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 0px;
+    }
+}
+
 @media (max-width: 414px) {
     padding: 24px;
     width: 279px;
     gap: 24px;
 
-    .span {
+    span {
         font-size: 15px;
         line-height: 18.6px;
     }
@@ -119,7 +168,6 @@ ul li {
     .start {
         height: 48px;
         margin-top: 12px;
-        font-size: 18px;
         font-size: 18px;
         font-weight: 700;
         line-height: 22px;

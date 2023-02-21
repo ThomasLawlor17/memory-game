@@ -14,7 +14,10 @@ flex-direction: column;
 align-items: center;
 justify-content: flex-start;
 
-
+@media (max-width: 769px) {
+  gap: 78px;
+  padding-top: 169px;
+}
 
 @media (max-width: 414px) {
   gap: 45px;

@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react'
 import { AppContext } from '../App.provider'
 
+
 const Start = () => {
     const {setActive, theme, setTheme, themeList, players, setPlayers, size, setSize, setTurn, setTime, setMoves, makeBoard} = useContext(AppContext)
     const numPlayers = [1,2,3,4]
     const handleGameStart = () => {
         let err = []
-        if (!theme) {
+        if (!theme && theme !== 0) {
             setTheme(5)
         }
         if (!players) {
@@ -39,7 +40,7 @@ const Start = () => {
                 <span>Select Theme</span>
                 <div className="buttons">
                     <button onClick={() => setTheme(5)} className={theme === 5 ? 'active' : ''}>Numbers</button>
-                    <ul><span>{theme === 0 ? 'Space' : theme === 1 ? 'Star Wars' : theme === 2 ? 'Sports' : theme === 3 ? 'Vehicles' : 'Icons'}</span>
+                    <ul><span>{theme === 0 ? 'Space' : theme === 1 ? 'Star Wars' : theme === 2 ? 'Sports' : theme === 3 ? 'Marvel' : 'Icons'}</span>
                         {themeList.map((t, i) => (
                             <li key={i} onClick={() => setTheme(i)} className={theme === i ? 'active' : ''}>{t}</li>
                         ))}

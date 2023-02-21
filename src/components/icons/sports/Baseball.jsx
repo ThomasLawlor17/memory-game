@@ -2,7 +2,7 @@ import React from 'react'
 
 const BaseballIcon = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 64 64">
+    <svg viewBox="11.95 9 43.05 45.5">
         <title>Baseball_1</title>
         <path d="M49,47.11l-2.95,3L33.16,39.32,15.5,24.56c-.51-.42-1-.83-1.53-1.28a5.83,5.83,0,0,1,6.47-9.6,6.91,6.91,0,0,1,2.23,1.93L36.18,31.79,48.74,46.84Z"/>
         <path d="M49,47.11l-2.95,3L33.16,39.32,15.5,24.56c-.51-.42-1-.83-1.53-1.28a5.83,5.83,0,0,1,6.47-9.6,6.91,6.91,0,0,1,2.23,1.93L36.18,31.79,48.74,46.84Z"/>
@@ -19,3 +19,4 @@ const BaseballIcon = () => {
 }
 
 export default BaseballIcon
+

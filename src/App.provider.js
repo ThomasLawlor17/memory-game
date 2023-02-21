@@ -41,7 +41,7 @@ const AppProvider = ({children}) => {
         'Space',
         'Star Wars',
         'Sports',
-        'Vehicles',
+        'Marvel',
     ])
 
     const makeBoard = (size) => {

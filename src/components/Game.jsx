@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useTimer } from 'react-timer-hook'
 import { AppContext } from '../App.provider'
+import Icon from './icons/Icon'
 
 const Game = () => {
-    const {setActive, setTheme, icons, setIcons, players, setPlayers, size, setSize, board, time, setTime, turn, setTurn, moves, setMoves} = useContext(AppContext)
+    const {setActive, theme, setTheme, icons, setIcons, players, setPlayers, size, setSize, board, time, setTime, turn, setTurn, moves, setMoves} = useContext(AppContext)
 
     const [activeCell, setActiveCell] = useState()
     const [activeIndex, setActiveIndex] = useState()
@@ -14,6 +14,11 @@ const Game = () => {
     const [start, setStart] = useState()
     const [now, setNow] = useState(start)
     const counter = now - start
+
+    const spaceIcons = ['Astronaut', 'Iss', 'Meteor', 'Planet', 'Rocket', 'Satellite', 'SolarSystem', 'Telescope', 'Rover', 'BlackHole', 'Eagle', 'Atom', "Ufo", 'Radar', 'Sputnik', 'Station', 'Invader']
+    const starwarsIcons = ['Atat', 'BobaFett', 'Deathstar', 'Saber', 'Tie', 'Vader', 'R2', 'MFalcon', 'Xwing', 'Trooper', 'Empire', 'Rebels', 'Pilot', 'Leah', 'Chewey', 'C3po', 'Yoda']
+    const sportsIcons = ['Badminton', 'Baseball', 'Basketball', 'Puck', 'TableTennis', 'Volleyball', 'Golf', 'Football', 'Bike', 'Bowling', 'Boxing', 'Cricket', 'Formula', 'Kyak', 'Pool', 'Soccer', 'Tennis', 'Trophy']
+    const marvelIcons = ['Ironman', 'Spiderman', 'Stormbreaker', 'CptAmerica', 'Widow', 'Avengers', 'Loki', 'Gauntlet', 'Antman', 'ArcReactor', 'BlackPanther', 'CptMarvel', 'Groot', 'Hawkeye', 'Hulk', 'Scepter', 'Shield', 'Thanos', 'Xmen']
 
     useEffect(() => {
         if (gameStart) {
@@ -116,7 +121,7 @@ const Game = () => {
     <section>
         <div className="baord">
             {board.map((b, i) => (
-                <div key={i} onClick={completedBoard[i] === b ? null : () => handleCellClick(b, i)} style={{width: '30px', height: '30px', backgroundColor: `${completedBoard[i] === b ? 'blue' : activeIndex === i ? 'green' : 'red'}`, cursor: 'pointer'}}>{b}</div>
+                <div key={i} onClick={completedBoard[i] === b ? null : () => handleCellClick(b, i)} style={{width: '30px', height: '30px', backgroundColor: `${completedBoard[i] === b ? 'blue' : activeIndex === i ? 'green' : 'red'}`, cursor: 'pointer'}}>{theme < 5 ? <Icon name={theme === 0 ? spaceIcons[b] : theme === 1 ? starwarsIcons[b] : theme === 2 ? sportsIcons[b] : theme === 3 ? marvelIcons[b] : ''}/> : b}</div>
             ))}
         </div>
         <div>

@@ -25,10 +25,12 @@ overflow: hidden;
 
   @media (max-width: 769px) {
     padding-top: 169px;
+    height: calc(100vh - 169px);
   }
   @media (max-width: 414px) {
     gap: 45px;
     padding-top: 80px;
+    height: calc(100vh - 80px);
   }
 }
 

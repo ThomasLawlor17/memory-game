@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="424px" viewBox="0 0 40 424" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.1 (25234) - http://www.bohemiancoding.com/sketch -->
+    <title>lightsaber-luke-anh</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="star-wars-copy" sketch:type="MSArtboardGroup" transform="translate(-931.000000, -2367.000000)">
+            <g id="lightsaber-luke-anh" sketch:type="MSLayerGroup" transform="translate(931.000000, 2367.000000)">
+                <path d="M28.5688,5.04 C28.4928,2.32 26.5648,0.088 24.1408,0.004 C21.6168,-0.084 19.5088,2.168 19.4328,5.04 L16.0008,288 L32.0008,288 L28.5688,5.04 Z" id="Fill-42" fill="#1EAAE1" sketch:type="MSShapeGroup"></path>
+                <path d="M36,424 L12,424 L12,352 L36,352 L36,424 Z" id="Fill-43" fill="#BEBEBE" sketch:type="MSShapeGroup"></path>
+                <path d="M36,304 L16,304 L16,280 L36,280 L36,304 Z" id="Fill-44" fill="#8C8C8C" sketch:type="MSShapeGroup"></path>
+                <path d="M40,352 L8,352 L8,304 L40,304 L40,352 Z" id="Fill-45" fill="#BEBEBE" sketch:type="MSShapeGroup"></path>
+                <path d="M16,420 L8,420 L8,352 L16,352 L16,420 Z" id="Fill-46" fill="#8C8C8C" sketch:type="MSShapeGroup"></path>
+                <path d="M40,420 L32,420 L32,352 L40,352 L40,420 Z" id="Fill-47" fill="#8C8C8C" sketch:type="MSShapeGroup"></path>
+                <path d="M28,420 L20,420 L20,352 L28,352 L28,420 Z" id="Fill-48" fill="#8C8C8C" sketch:type="MSShapeGroup"></path>
+                <path d="M4,348 L8,348 L8,332 L4,332 L4,348 Z" id="Fill-49" fill="#CBCBCB" sketch:type="MSShapeGroup"></path>
+                <path d="M4,304 L8,304 L8,296 L4,296 L4,304 Z" id="Fill-50" fill="#BEBEBE" sketch:type="MSShapeGroup"></path>
+                <path d="M12,292 L4,292 C1.8,292 0,290.2 0,288 C0,285.8 1.8,284 4,284 L12,284 C14.2,284 16,285.8 16,288 C16,290.2 14.2,292 12,292" id="Fill-51" fill="#BEBEBE" sketch:type="MSShapeGroup"></path>
+                <path d="M8,308 L8,272 L8,272 C12.904,272 17.384,274.772 19.576,279.156 L24,288 L40,296 L40,308 L8,308 Z" id="Fill-52" fill="#BEBEBE" sketch:type="MSShapeGroup"></path>
+                <path d="M32,300 C32,302.208 30.208,304 28,304 C25.792,304 24,302.208 24,300 C24,297.792 25.792,296 28,296 C30.208,296 32,297.792 32,300" id="Fill-53" fill="#8C8C8C" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

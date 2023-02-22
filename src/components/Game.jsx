@@ -8,9 +8,12 @@ const StyledDiv = styled.div`
 display: flex;
 align-items: center;
 justify-content: space-between;
+padding: 67px 165px 0 165px;
 
 h1 {
     margin: 0;
+    font-size: 40px;
+    line-height: 49.6px;
 }
 
 div, ul {
@@ -27,36 +30,29 @@ div {
 }
 
 ul {
+    gap: 16px;
     li {
         display: flex;
         align-items: center;
         justify-content: center;
-
+        border-radius: 26px;
+        font-size: 20px;
+        line-height: 24.8px;
+        height: 52px;
         &:first-of-type {
             background-color: var(--orange);
             color: var(--white);
+            width: 127px;
         }
         &:last-of-type {
             background-color: var(--gray);
+            width: 149px;
         }
     }
 }
 
 @media (max-width: 769px) {
     padding: 37px 39px 0 39px;
-
-    ul {
-        gap: 16px;
-
-        li {
-            width: 149px;
-            height: 52px;
-            border-radius: 26px;
-            font-size: 20px;
-            line-height: 24.8px;
-        }
-    }
-
 }
 
 @media (max-width: 414px) {
@@ -128,6 +124,8 @@ display: none;
 const StyledSection = styled.section`
 display: flex;
 flex-direction: column;
+margin-top: 105px;
+gap: 12.3vh;
 
 .board {
     display: grid;
@@ -144,9 +142,7 @@ flex-direction: column;
         color: var(--white);
 
         svg {
-            // color: var(--white);
             fill: var(--white);
-            // stroke: var(--white);
         }
     }
     .correct {
@@ -159,19 +155,55 @@ flex-direction: column;
         background-color: red;
     }
 }
+.grid-4 {
+    grid-template-columns: repeat(4, 118px);
+    grid-gap: 20px;
 
+    div {
+        width: 118px;
+        height: 118px;
+        border-radius: 59px;
+        font-size: 56px;
+        line-height: 69.44px;
+
+        svg {
+            width: 58px;
+            height: 58px;
+        }
+    }
+}
+.grid-6 {
+    grid-template-columns: repeat(6, 82px);
+    grid-gap: 16px;
+
+    div {
+        width: 82px;
+        height: 82px;
+        border-radius: 41px;
+        font-size: 44px;
+        line-height: 54.56px;
+
+        svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
 
 .solo {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 
     div {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         background-color: var(--light-slate);
-        border-radius: 5px;
+        border-radius: 10px;
+        padding: 17px 24px 15px 21px;
+        width: 215px;
 
         span {
             font-weight: 700;
@@ -189,11 +221,20 @@ flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    @media (min-width: 770px) {
+        width: 77.1%;
+        max-width: 1110px;
+        margin: auto;
+    }
 
     div {
         display: flex;
         background-color: var(--gray);
         border-radius: 5px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 17px 24px 15px 21px;
+        width: 215px;
 
         span:first-of-type {
             color: var(--slate);
@@ -221,6 +262,21 @@ flex-direction: column;
                 border-left: 13px inset transparent;
             }
         }
+
+        @media (min-width: 770px) {
+            &::after {
+                content: 'CURRENT TURN';
+                position: absolute;
+                bottom: -33px;
+                margin: auto;
+                left: 0;
+                right: 0;
+                text-align: center;
+                font-size: 13px;
+                line-height: 16.12px;
+                letter-spacing: 5px;
+            }
+        }
     }
 }
 
@@ -241,6 +297,10 @@ flex-direction: column;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 40px;
+        padding: 51px 56px 69px 56px;
+        width: 542px;
+        margin: auto;
 
         .title, ul, ul li {
             display: flex;
@@ -253,13 +313,39 @@ flex-direction: column;
         .title, ul {
             flex-direction: column;
         }
+        .title {
+            gap: 16px;
+            h2 {
+                font-size: 48px;
+                line-height: 59.52px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 22.32px;
+            }
+        }
         ul {
             width: 100%;
+            gap: 16px;
 
             li {
                 background-color: var(--gray);
                 border-radius: 5px;
-                justify-content: space-between;∂
+                justify-content: space-between;
+                padding: 17px 32px 15px 32px;
+                width: calc(100% - 64px);
+                border-radius: 10px;
+
+                span {
+                    &:first-of-type {
+                        font-size: 18px;
+                        line-height: 22.32px
+                    }
+                    &:last-of-type {
+                        font-size: 32px;
+                        line-height: 39.68px
+                    }
+                }
             }
             .winner {
                 background-color: var(--navy);
@@ -274,10 +360,18 @@ flex-direction: column;
             display: flex;
             align-items: center;
             width: 100%;
+            gap: 14px;
+            @media (min-width: 415px) {
+                margin-top: 16px;
+            }
 
             button {
                 border: none;
                 border-radius: 26px;
+                width: 100%;
+                height: 48px;
+                font-size: 20px;
+                line-height: 24.8px;
 
                 &:first-of-type {
                     background-color: var(--orange);
@@ -307,48 +401,11 @@ flex-direction: column;
         width: 76.679%;
         max-width: 572px;
     }
-    .grid-4 {
-        grid-template-columns: repeat(4, 118px);
-        grid-gap: 20px;
-
-        div {
-            width: 118px;
-            height: 118px;
-            border-radius: 59px;
-            font-size: 56px;
-            line-height: 69.44px;
-
-            svg {
-                width: 58px;
-                height: 58px;
-            }
-        }
-    }
-    .grid-6 {
-        grid-template-columns: repeat(6, 82px);
-        grid-gap: 16px;
-
-        div {
-            width: 82px;
-            height: 82px;
-            border-radius: 41px;
-            font-size: 44px;
-            line-height: 54.56px;
-
-            svg {
-                width: 40px;
-                height: 40px;
-            }
-        }
-    }
     .solo {
-        gap: 30px;
         div {
-            justify-content: space-between;
             padding: 17px 15px 15px 21px;
             width: calc(35% - 36px);
             max-width: 219px;
-            border-radius: 10px;
 
             span {
                 &:first-of-type {
@@ -370,6 +427,7 @@ flex-direction: column;
             width: calc(21.35% - 16px);
             max-width: 148px;
             height: 80px;
+            padding: 0;
             @media (min-width: 415px) {
                 padding-left: 16px;
             }
@@ -396,57 +454,7 @@ flex-direction: column;
     }
     .gameover {
         .content {
-            gap: 40px;
-            padding: 51px 56px 69px 56px;
             width: calc(100% - 226px);
-            margin: auto;
-            
-
-            .title {
-                gap: 16px;
-
-                h2 {
-                    font-size: 48px;
-                    line-height: 59.52px;
-                }
-                p {
-                    font-size: 18px;
-                    line-height: 22.32px;
-                }
-            }
-            ul {
-                gap: 16px;
-
-                li {
-                    padding: 17px 32px 15px 32px;
-                    width: calc(100% - 64px);
-                    border-radius: 10px;
-
-                    span {
-                        &:first-of-type {
-                            font-size: 18px;
-                            line-height: 22.32px
-                        }
-                        &:last-of-type {
-                            font-size: 32px;
-                            line-height: 39.68px
-                        }
-                    }
-                }
-            }
-            .btns {
-                gap: 14px;
-                @media (min-width: 415px) {
-                    margin-top: 16px;
-                }
-
-                button {
-                    width: 100%;
-                    height: 48px;
-                    font-size: 20px;
-                    line-height: 24.8px;
-                }
-            }
         }
     }
 }
@@ -498,9 +506,12 @@ flex-direction: column;
         gap: 25px;
         div {
             flex-direction: column;
+            justify-content: center;
             gap: 2px;
             width: 151px;
             height: 70px;
+            border-radius: 5px;
+            padding: 0;
 
             span {
                 &:first-of-type {

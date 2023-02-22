@@ -152,7 +152,32 @@ gap: 12.3vh;
         background-color: var(--orange);
     }
     .incorrect {
-        background-color: red;
+        background-color: var(--orange);
+        animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+
+        @keyframes shake {
+            10%,
+            90% {
+              transform: translate3d(-1px, 0, 0);
+              background-color: red;
+            }
+          
+            20%,
+            80% {
+              transform: translate3d(2px, 0, 0);
+            }
+          
+            30%,
+            50%,
+            70% {
+              transform: translate3d(-4px, 0, 0);
+            }
+          
+            40%,
+            60% {
+              transform: translate3d(4px, 0, 0);
+            }
+          }
     }
 }
 .grid-4 {
@@ -762,7 +787,7 @@ const Game = () => {
                 setActiveCell(null)
                 setActiveIndex(null)
                 setSecondCellIndex(null)
-            }, 2000)
+            }, 1100)
             if (players > 1) {
                 incrementTurn()
             }

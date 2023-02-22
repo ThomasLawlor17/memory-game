@@ -9,6 +9,8 @@ import Start from './components/Start';
 const StyledMain = styled.main`
 height: 100vh;
 width: 100vw;
+position: absolute;
+overflow: hidden;
 
 &:has(.Start) {
   display: flex;
@@ -19,6 +21,7 @@ width: 100vw;
   color: var(--white);
   gap: 78px;
   padding-top: 154px;
+  height: calc(100vh - 154px);
 
   @media (max-width: 769px) {
     padding-top: 169px;

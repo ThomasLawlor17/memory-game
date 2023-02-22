@@ -656,6 +656,7 @@ const Game = () => {
     const [start, setStart] = useState()
     const [now, setNow] = useState(start)
     const [menu, setMenu] = useState(false)
+    const [showBoard, setShowBoard] = useState(true)
     const counter = now - start
     const formatTime = (counter) => {
         if (counter.length < 4 || !counter) {
@@ -690,6 +691,12 @@ const Game = () => {
         }
     }, [gameStart])
 
+    // Show answers on load so its not random guessing
+    useEffect(() => {
+        setTimeout(() => {
+            setShowBoard(false)
+        }, size === 0 ? 2500 : 4000)
+    }, [showBoard])
 
     const incrementTurn = () => {
         if (turn !== players - 1) {
@@ -829,7 +836,7 @@ const Game = () => {
     <StyledSection className='Game'>
         <div className={`board grid-${size === 0 ? '4' : size === 1 ? '6' : ''}`}>
             {board.map((b, i) => (
-                <div key={i} onClick={completedBoard[i] === b || secondCellIndex ? null : () => handleCellClick(b, i)} className={activeIndex === i && !secondCellIndex ? 'active-cell' : secondCellIndex === i || (secondCellIndex && activeIndex === i) ? 'incorrect' : completedBoard[i] === b ? 'correct' : ''}>{activeIndex === i || completedBoard[i] === b || secondCellIndex === i ? cellIcon(b) : ''}</div>
+                <div key={i} onClick={completedBoard[i] === b || secondCellIndex ? null : () => handleCellClick(b, i)} className={activeIndex === i && !secondCellIndex ? 'active-cell' : secondCellIndex === i || (secondCellIndex && activeIndex === i) ? 'incorrect' : completedBoard[i] === b ? 'correct' : ''}>{activeIndex === i || completedBoard[i] === b || secondCellIndex === i || showBoard ? cellIcon(b) : ''}</div>
             ))}
         </div>
         {players > 1 ? 

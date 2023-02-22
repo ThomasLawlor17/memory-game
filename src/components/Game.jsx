@@ -142,6 +142,12 @@ flex-direction: column;
         justify-content: center;
         font-weight: 700;
         color: var(--white);
+
+        svg {
+            // color: var(--white);
+            fill: var(--white);
+            // stroke: var(--white);
+        }
     }
     .correct {
         background-color: var(--light-slate);
@@ -311,6 +317,11 @@ flex-direction: column;
             border-radius: 59px;
             font-size: 56px;
             line-height: 69.44px;
+
+            svg {
+                width: 58px;
+                height: 58px;
+            }
         }
     }
     .grid-6 {
@@ -323,6 +334,11 @@ flex-direction: column;
             border-radius: 41px;
             font-size: 44px;
             line-height: 54.56px;
+
+            svg {
+                width: 40px;
+                height: 40px;
+            }
         }
     }
     .solo {
@@ -453,6 +469,11 @@ flex-direction: column;
             border-radius: 59px;
             font-size: 40px;
             line-height: 49.6px;
+
+            svg {
+                width: 35.4px;
+                height: 35.4px
+            }
         }
     }
     .grid-6 {
@@ -465,6 +486,11 @@ flex-direction: column;
             border-radius: 41px;
             font-size: 24px;
             line-height: 29.76px;
+
+            svg {
+                width: 23px;
+                height: 23px;
+            }
         }
     }
 
@@ -616,10 +642,10 @@ const Game = () => {
 		};
 	}, []);
 
-    const spaceIcons = ['Astronaut', 'Iss', 'Meteor', 'Planet', 'Rocket', 'Satellite', 'SolarSystem', 'Telescope', 'Rover', 'BlackHole', 'Eagle', 'Atom', "Ufo", 'Radar', 'Sputnik', 'Station', 'Invader']
-    const starwarsIcons = ['Atat', 'BobaFett', 'Deathstar', 'Saber', 'Tie', 'Vader', 'R2', 'MFalcon', 'Xwing', 'Trooper', 'Empire', 'Rebels', 'Pilot', 'Leah', 'Chewey', 'C3po', 'Yoda']
+    const spaceIcons = ['Astronaut', 'Iss', 'Meteor', 'Planet', 'Rocket', 'Satellite', 'SolarSystem', 'Telescope', 'Rover', 'BlackHole', 'Eagle', 'Atom', "Ufo", 'Radar', 'Sputnik', 'Station', 'Invader', 'Galaxy']
+    const starwarsIcons = ['Atat', 'BobaFett', 'Deathstar', 'Saber', 'Tie', 'Vader', 'R2', 'MFalcon', 'Xwing', 'Trooper', 'Empire', 'Rebels', 'Pilot', 'Leah', 'Chewey', 'C3po', 'Yoda', 'Logo']
     const sportsIcons = ['Badminton', 'Baseball', 'Basketball', 'Puck', 'TableTennis', 'Volleyball', 'Golf', 'Football', 'Bike', 'Bowling', 'Boxing', 'Cricket', 'Formula', 'Kyak', 'Pool', 'Soccer', 'Tennis', 'Trophy']
-    const marvelIcons = ['Ironman', 'Spiderman', 'Stormbreaker', 'CptAmerica', 'Widow', 'Avengers', 'Loki', 'Gauntlet', 'Antman', 'ArcReactor', 'BlackPanther', 'CptMarvel', 'Groot', 'Hawkeye', 'Hulk', 'Scepter', 'Shield', 'Thanos', 'Xmen']
+    const marvelIcons = ['Ironman', 'Spiderman', 'Stormbreaker', 'CptAmerica', 'Widow', 'Avengers', 'Loki', 'Gauntlet', 'Antman', 'ArcReactor', 'BlackPanther', 'CptMarvel', 'Groot', 'Hawkeye', 'Hulk', 'Scepter', 'Shield', 'Xmen', 'Xmen']
 
     useEffect(() => {
         if (gameStart) {

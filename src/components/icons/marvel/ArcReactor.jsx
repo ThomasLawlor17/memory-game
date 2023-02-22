@@ -7,10 +7,10 @@ const ArcReactorIcon = () => {
 				<ellipse
 					cx="255.958"
 					cy="255.758"
-					fill="#FFFFFF"
+					fill="none"
 					rx="237.286"
 					ry="227.534"
-					stroke="#000000"
+					stroke="currentColor"
 					strokeWidth="32.3899"
 				/>
 				<g>
@@ -29,24 +29,24 @@ const ArcReactorIcon = () => {
 						y="71.24"
 					/>
 					<polygon
-						fill="#FFFFFF"
+						fill="none"
 						points="    72.96,142.165 443.359,142.165 259.238,464.376   "
-						stroke="#000000"
+						stroke="currentColor"
 						strokeLinecap="round"
 						strokeLinejoin="round"
 						strokeWidth="25.6236"
 					/>
 					<polygon
 						points="163.079,193.23    353.238,193.23 258.715,358.652   "
-						stroke="#000000"
+						stroke="currentColor"
 						strokeLinecap="round"
 						strokeLinejoin="round"
 						strokeWidth="12.4647"
 					/>
 					<polygon
-						fill="#FFFFFF"
+						fill="none"
 						points="    195.707,213.368 196.666,213.384 225.915,213.847 225.915,223.438 292.562,223.438 292.083,213.368 321.33,214.328    306.467,241.179 298.314,234.466 267.15,292.963 274.344,298.235 259.477,321.731 243.655,297.277 251.328,292.481    219.682,234.945 212.008,240.218   "
-						stroke="#000000"
+						stroke="currentColor"
 						strokeLinecap="round"
 						strokeLinejoin="round"
 						strokeWidth="9.2628"

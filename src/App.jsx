@@ -17,9 +17,10 @@ width: 100vw;
   justify-content: flex-start;
   background-color: var(--navy);
   color: var(--white);
+  gap: 78px;
+  padding-top: 154px;
 
   @media (max-width: 769px) {
-    gap: 78px;
     padding-top: 169px;
   }
   @media (max-width: 414px) {

@@ -26,17 +26,27 @@ span {
 li, .buttons span, button {
     font-size: 26px;
     line-height: 32.24px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--blue);
+    }
 }
 div ul:not(.open), .buttons {
     margin-top: 16px;
 }
 .buttons ul {
-    width: 134px;
+    width: 256px;
     background-color: var(--light-slate);
     border-radius: 20px;
     gap: 10px;
     padding: 15px 0 15px 0;
-    top: 45px;
+    top: 57px;
+
+    li:hover {
+        width: 100%;
+        background-color: var(--blue);
+    }
 }
 
 .theme, .players, .size {
@@ -56,6 +66,10 @@ div ul:not(.open), .buttons {
     padding: 0;
     color: var(--white);
     font-weight: 700;
+
+    &:hover {
+        background-color: var(--blue);
+    }
 }
 
 .buttons ul {
@@ -109,6 +123,10 @@ ul li, .buttons span, .buttons button {
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 0px;
+
+    &:hover {
+        background-color: #FFB84A;
+    }
 }
 
 @media (max-width: 769px) {

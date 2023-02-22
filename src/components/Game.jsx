@@ -39,14 +39,24 @@ ul {
         font-size: 20px;
         line-height: 24.8px;
         height: 52px;
+        cursor: pointer;
         &:first-of-type {
             background-color: var(--orange);
             color: var(--white);
             width: 127px;
+
+            &:hover {
+                background-color: #FFB84A;
+            }
         }
         &:last-of-type {
             background-color: var(--gray);
             width: 149px;
+
+            &:hover {
+                background-color: var(--blue);
+                color: var(--white);
+            }
         }
     }
 }
@@ -140,6 +150,7 @@ gap: 12.3vh;
         justify-content: center;
         font-weight: 700;
         color: var(--white);
+        cursor: pointer;
 
         svg {
             fill: var(--white);
@@ -397,13 +408,24 @@ gap: 12.3vh;
                 height: 48px;
                 font-size: 20px;
                 line-height: 24.8px;
+                cursor: pointer;
 
                 &:first-of-type {
                     background-color: var(--orange);
                     color: var(--white);
+
+                    &:hover {
+                        background-color: #FFB84A;
+                    }
                 }
                 &:last-of-type {
                     background-color: var(--gray);
+                    color: var(--navy);
+
+                    &:hover {
+                        background-color: var(--blue);
+                        color: var(--white);
+                    }
                 }
             }
         }

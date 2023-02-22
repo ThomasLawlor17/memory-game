@@ -6,6 +6,7 @@
   --dark-slate: #304859;
   --navy: #152938;
   --light-gray: #F2F2F2;
+  --gray: #DFE7EC;
   --slate: #7191A5;
   --blue: #6395B8;
   --white: #FCFCFC;
@@ -18,10 +19,16 @@ body {
   font-family: 'Atkinson Hyperlegible', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
 }
 
 button, ul {
   font-family: 'Atkinson Hyperlegible', sans-serif;
+  font-weight: 700;
+}
+
+h1, h2, h3, p {
+  margin: 0;
 }
 
 code {

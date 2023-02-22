@@ -219,7 +219,7 @@ const Start = () => {
     }
 
   return (
-    <StyledSection>
+    <StyledSection className='Start'>
             <div className="theme">
                 <span>Select Theme</span>
                 <div className="buttons">

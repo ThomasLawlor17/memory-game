@@ -9,35 +9,44 @@ import Start from './components/Start';
 const StyledMain = styled.main`
 height: 100vh;
 width: 100vw;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
 
-@media (max-width: 769px) {
-  gap: 78px;
-  padding-top: 169px;
+&:has(.Start) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--navy);
+  color: var(--white);
+
+  @media (max-width: 769px) {
+    gap: 78px;
+    padding-top: 169px;
+  }
+  @media (max-width: 414px) {
+    gap: 45px;
+    padding-top: 80px;
+  }
 }
 
-@media (max-width: 414px) {
-  gap: 45px;
-  padding-top: 80px;
-}
-
-
-`
+&:has(.Game) {
+  background-color: var(--white);
+  color: var(--navy);
+}`
 
 
 function App() {
   const {active} = useContext(AppContext)
 
   return (
-    <StyledMain className='App' style={{backgroundColor: `var(--${active ? 'white' : 'navy'})`, color: `var(--${active ? 'navy' : 'white'})`}}>
-      <Header/>
+    <StyledMain className='App'>
+
       {active ? 
       <Game/>
       :
+      <>
+      <Header/>
       <Start/>
+      </>
       }
     </StyledMain>
   );

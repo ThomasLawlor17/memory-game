@@ -28,8 +28,10 @@ li, .buttons span, button {
     line-height: 32.24px;
     cursor: pointer;
 
-    &:hover {
-        background-color: var(--blue);
+    @media (min-width: 770px) {
+        &:hover {
+            background-color: var(--blue);
+        }
     }
 }
 div ul:not(.open), .buttons {
@@ -43,9 +45,11 @@ div ul:not(.open), .buttons {
     padding: 15px 0 15px 0;
     top: 57px;
 
-    li:hover {
-        width: 100%;
-        background-color: var(--blue);
+    @media (min-width: 770px) {
+        li:hover {
+            width: 100%;
+            background-color: var(--blue);
+        }
     }
 }
 
@@ -67,8 +71,10 @@ div ul:not(.open), .buttons {
     color: var(--white);
     font-weight: 700;
 
-    &:hover {
-        background-color: var(--blue);
+    @media (min-width: 770px) {
+        &:hover {
+            background-color: var(--blue);
+        }
     }
 }
 
@@ -124,8 +130,10 @@ ul li, .buttons span, .buttons button {
     line-height: 40px;
     letter-spacing: 0px;
 
-    &:hover {
-        background-color: #FFB84A;
+    @media (min-width: 770px) {
+        &:hover {
+            background-color: #FFB84A;
+        }
     }
 }
 

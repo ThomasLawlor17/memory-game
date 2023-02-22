@@ -718,7 +718,7 @@ const Game = () => {
         setTimeout(() => {
             setShowBoard(false)
         }, size === 0 ? 2500 : 4000)
-    }, [showBoard])
+    }, [showBoard, size])
 
     const incrementTurn = () => {
         if (turn !== players - 1) {
